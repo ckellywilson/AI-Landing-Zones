@@ -6,6 +6,10 @@
   line-height: 1.3;
 }
 
+.md-nav--primary .md-nav__link > .md-ellipsis {
+  text-wrap: balance;
+}
+
 /* Slightly reduce section labels as well (Material renders them as labels) */
 .md-nav--primary .md-nav__item--section > label.md-nav__link {
   font-size: 0.85rem;
@@ -25,6 +29,36 @@
   word-break: keep-all;
   overflow-wrap: normal;
   white-space: nowrap;
+}
+
+.md-typeset .landing-zone-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin: 1.2rem 0 0.8rem;
+}
+
+.md-typeset .landing-zone-overview h2 {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.md-typeset .landing-zone-overview p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.md-typeset .landing-zone-overview + .admonition.note > p:not(.admonition-title) {
+  text-wrap: pretty;
+}
+
+@media (max-width: 48em) {
+  .md-typeset .landing-zone-overview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 .md-typeset .alz-download-grid {
@@ -78,4 +112,47 @@
 .md-typeset .alz-download-card--primary {
   background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), transparent);
   border-color: color-mix(in srgb, var(--md-primary-fg-color) 28%, var(--md-default-fg-color--lightest));
+}
+
+.md-typeset details.runbook-command {
+  background: transparent;
+  border: 0;
+  border-block: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0;
+  box-shadow: none;
+  color: inherit;
+  font-size: inherit;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.md-typeset details.runbook-command > summary {
+  background: transparent;
+  color: var(--md-primary-fg-color);
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.7rem 1.8rem 0.7rem 0;
+}
+
+.md-typeset details.runbook-command > summary::before {
+  display: none;
+}
+
+.md-typeset details.runbook-command > summary::after {
+  margin-top: -0.5rem;
+  top: 50%;
+}
+
+.md-typeset details.runbook-command > summary:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset details.runbook-command > summary:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.md-typeset details.runbook-command[open] {
+  padding-bottom: 0.6rem;
 }

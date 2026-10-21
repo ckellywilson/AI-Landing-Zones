@@ -6,17 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentation for Azure AI Landing Zones">
+        <meta name="description" content="Documentation for AI Landing Zones">
       
       
         <meta name="author" content="Microsoft">
       
       
       
-        <link rel="prev" href="../regional-considerations/">
-      
-      
-        <link rel="next" href="../public-ingress/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Hub-and-Spoke Topology - Azure AI Landing Zones</title>
+        <title>Hub-and-spoke network reference - AI Landing Zones</title>
       
     
     
@@ -53,7 +49,7 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css?v=47a3a035c069">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hub-and-spoke-topology" class="md-skip">
+        <a href="#hub-and-spoke-network-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Azure AI Landing Zones" class="md-header__button md-logo" aria-label="Azure AI Landing Zones" data-md-component="logo">
+    <a href="../.." title="AI Landing Zones" class="md-header__button md-logo" aria-label="AI Landing Zones" data-md-component="logo">
       
   <img src="../../media/logo.svg" alt="logo">
 
@@ -107,13 +103,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Azure AI Landing Zones
+            AI Landing Zones
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hub-and-Spoke Topology
+              Hub-and-spoke network reference
             
           </span>
         </div>
@@ -203,12 +199,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Azure AI Landing Zones" class="md-nav__button md-logo" aria-label="Azure AI Landing Zones" data-md-component="logo">
+    <a href="../.." title="AI Landing Zones" class="md-nav__button md-logo" aria-label="AI Landing Zones" data-md-component="logo">
       
   <img src="../../media/logo.svg" alt="logo">
 
     </a>
-    Azure AI Landing Zones
+    AI Landing Zones
   </label>
   
     <div class="md-nav__source">
@@ -258,15 +254,62 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Landing Zone
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Landing Zone
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../whatisnew/" class="md-nav__link">
+      <a href="../../agent-landing-zone/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    What's New
+    Overview
   
 
     
@@ -278,33 +321,23 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+              
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent-landing-zone/how-it-works/" class="md-nav__link">
+        
   
   
   <span class="md-ellipsis">
     
   
-    Architecture
+    How the template works
   
 
     
@@ -312,19 +345,11 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Architecture
+      </a>
+    </li>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+              
             
               
                 
@@ -360,91 +385,26 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../architecture/cost-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Cost Guide
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../architecture/faq/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FAQ
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Bicep Implementation
+    Plan your deployment
   
 
     
@@ -455,44 +415,16 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Bicep Implementation
+    Plan your deployment
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -508,7 +440,7 @@
   <span class="md-ellipsis">
     
   
-    Deployed Resources & Cost
+    Resources and cost estimates
   
 
     
@@ -529,14 +461,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-deploy/" class="md-nav__link">
+      <a href="../../architecture/cost-guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    How to Deploy
+    Cost planning
   
 
     
@@ -557,14 +489,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploy-with-azure-devops/" class="md-nav__link">
+      <a href="../../agent-landing-zone/sizing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy with Azure DevOps
+    Sizing and capacity
   
 
     
@@ -578,29 +510,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../regional-considerations/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Regional Considerations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -610,26 +522,28 @@
                 
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
           
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
     
   
-    Hub-and-Spoke Topology
+    Runbooks
   
 
     
@@ -637,115 +551,19 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
   
-  
-  <span class="md-ellipsis">
-    
-  
-    Hub-and-Spoke Topology
-  
-
-    
-  </span>
-  
+    Runbooks
   
 
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-this-topology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to use this topology
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-the-spoke-creates-vs-consumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What the spoke creates vs. consumes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#minimum-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum parameters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-planning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Network planning
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment flow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See also
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -754,14 +572,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../public-ingress/" class="md-nav__link">
+      <a href="../../agent-landing-zone/deploy-infra-only/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Public Ingress (App Gateway)
+    Infrastructure only
   
 
     
@@ -782,14 +600,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../permissions/" class="md-nav__link">
+      <a href="../../agent-landing-zone/deploy-full-stack/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Permissions
+    Full stack deploy
   
 
     
@@ -810,14 +628,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../parameterization/" class="md-nav__link">
+      <a href="../../agent-landing-zone/publish-to-teams/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Parameterization
+    Teams & M365
   
 
     
@@ -838,14 +656,273 @@
   
   
     <li class="md-nav__item">
-      <a href="../accelerator-pattern/" class="md-nav__link">
+      <a href="../../agent-landing-zone/azure-devops/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Building Accelerators (Submodule Pattern)
+    Azure DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent-landing-zone/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent-landing-zone/hosted-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent hosting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent-landing-zone/network-isolation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network isolation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent-landing-zone/build-your-own-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/Readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent-landing-zone/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
   
 
     
@@ -873,14 +950,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/" class="md-nav__link">
+      <a href="../../whatisnew/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Terraform Implementation
+    What's New
   
 
     
@@ -900,41 +977,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform-parity/" class="md-nav__link">
+      <a href="../../architecture/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Terraform parity
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../portal/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Portal installation
+    FAQ
   
 
     
@@ -974,10 +1024,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-use-this-topology" class="md-nav__link">
+  <a href="#agree-ownership-and-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to use this topology
+        Agree ownership and permissions
       
     </span>
   </a>
@@ -985,10 +1035,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-the-spoke-creates-vs-consumes" class="md-nav__link">
+  <a href="#address-and-subnet-contract" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What the spoke creates vs. consumes
+        Address and subnet contract
       
     </span>
   </a>
@@ -996,10 +1046,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#minimum-parameters" class="md-nav__link">
+  <a href="#hub-integration-inputs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Minimum parameters
+        Hub integration inputs
       
     </span>
   </a>
@@ -1007,10 +1057,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#network-planning" class="md-nav__link">
+  <a href="#private-dns-ownership" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network planning
+        Private DNS ownership
       
     </span>
   </a>
@@ -1018,10 +1068,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deployment-flow" class="md-nav__link">
+  <a href="#peering-and-bootstrap-ordering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deployment flow
+        Peering and bootstrap ordering
       
     </span>
   </a>
@@ -1029,10 +1079,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
+  <a href="#verify-the-network-contract" class="md-nav__link">
     <span class="md-ellipsis">
       
-        See also
+        Verify the network contract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovery-and-spoke-retirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery and spoke retirement
       
     </span>
   </a>
@@ -1059,158 +1120,330 @@
   
 
 
-<h1 id="hub-and-spoke-topology">Hub-and-Spoke Topology</h1>
-<p>This page summarizes the <strong>hub-and-spoke</strong> deployment topology: the AI Landing Zone spoke peers to a hub VNet that hosts shared platform services (Azure Firewall, Bastion, Private DNS zones, Log Analytics workspace).</p>
-<p>For the full end-to-end walkthrough — including the minimal test hub Bicep template, IP planning, peering setup, post-provisioning steps from the jumpbox, and the verification checklist — read the source runbook at <a href="https://github.com/Azure/bicep-ptn-aiml-landing-zone/blob/main/docs/runbook-hub-spoke.md">docs/runbook-hub-spoke.md</a>.</p>
-<h2 id="when-to-use-this-topology">When to use this topology</h2>
-<p>Pick hub-and-spoke when <strong>any</strong> of the following applies:</p>
-<ul>
-<li>A platform team already operates a corporate hub VNet (Connectivity subscription) with Azure Firewall and a central Bastion.</li>
-<li>DNS, identity, monitoring, or networking policy is centrally managed by a different team than the one shipping the AI workload.</li>
-<li>Multiple AI workloads (or other workloads) need to share egress, jumpbox, and DNS resolution.</li>
-<li>You are integrating the AI Landing Zone into an <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/">Azure Landing Zone</a> (CAF).</li>
-</ul>
-<h2 id="what-the-spoke-creates-vs-consumes">What the spoke creates vs. consumes</h2>
+<h1 id="hub-and-spoke-network-reference">Hub-and-spoke network reference</h1>
+<p>A private spoke can reuse an existing hub's controlled egress, operator access,
+DNS and monitoring rather than recreate them. This page defines the ownership
+and inputs for that design. It does not deploy a hub or provide a separate
+landing-zone deployment recipe.</p>
+<p>Apply these choices in <a href="../../agent-landing-zone/deploy-infra-only/">Deploy infrastructure only</a>
+or <a href="../../agent-landing-zone/deploy-full-stack/">Deploy the full stack</a>.
+For a network without shared hub dependencies, use the <a href="../standalone/">standalone reference</a>.</p>
+<h2 id="agree-ownership-and-permissions">Agree ownership and permissions</h2>
+<p><a id="1-agree-ownership-and-prerequisites"></a></p>
 <table>
 <thead>
 <tr>
-<th>Resource</th>
-<th>Spoke creates</th>
-<th>Consumes from hub</th>
+<th>Owner</th>
+<th>Contract before deployment</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Spoke VNet, subnets, NSGs</td>
-<td>✅</td>
-<td>—</td>
+<td>Workload team</td>
+<td>Dedicated spoke scope, nonoverlapping addresses, workload resources, private endpoints and identities</td>
 </tr>
 <tr>
-<td>Private endpoints for AI services</td>
-<td>✅</td>
-<td>—</td>
+<td>Hub/network team</td>
+<td>Hub VNet, firewall policy, forward/return routes, both peering directions, Bastion/VPN and shared route tables</td>
 </tr>
 <tr>
-<td>AI Foundry, AI Search, Cosmos DB, Storage, ACR, App Config, Key Vault</td>
-<td>✅</td>
-<td>—</td>
+<td>DNS team</td>
+<td>Zone inventory, zone groups/records, links or resolver forwarding, cross-scope permissions and conflict prevention</td>
 </tr>
 <tr>
-<td>Container Apps environment + workload profiles</td>
-<td>✅</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Log Analytics workspace</td>
-<td>Optional</td>
-<td>✅ via <code>existingPlatformServices.logAnalyticsWorkspaceResourceId</code></td>
-</tr>
-<tr>
-<td>Application Insights</td>
-<td>Optional</td>
-<td>✅ via <code>existingPlatformServices.applicationInsightsResourceId</code></td>
-</tr>
-<tr>
-<td>Private DNS zones (15 namespaces)</td>
-<td>Optional, per-zone</td>
-<td>✅ via <code>existingPrivateDnsZones.*</code></td>
-</tr>
-<tr>
-<td>Azure Firewall</td>
-<td>Optional</td>
-<td>✅ via <code>hubIntegration.egressNextHopIp</code></td>
-</tr>
-<tr>
-<td>Bastion</td>
-<td>Optional</td>
-<td>✅ (hub Bastion reaches spoke jumpbox via peering)</td>
-</tr>
-<tr>
-<td>Jumpbox VM</td>
-<td>Optional</td>
-<td>✅ via <code>existingJumpboxResourceId</code></td>
-</tr>
-<tr>
-<td>NAT Gateway</td>
-<td>Optional</td>
-<td>— (typically the hub firewall provides egress)</td>
-</tr>
-<tr>
-<td>Spoke→hub VNet peering</td>
-<td>✅ (created by <code>main.bicep</code>)</td>
-<td>—</td>
+<td>Monitoring team</td>
+<td>Shared workspace/component access, retention and any central Azure Monitor Private Link Scope (AMPLS)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="minimum-parameters">Minimum parameters</h2>
-<p>For an AI LZ Integrated deployment:</p>
-<div class="highlight"><pre><span></span><code>azd<span class="w"> </span>env<span class="w"> </span><span class="nb">set</span><span class="w"> </span>DEPLOYMENT_MODE<span class="w">                  </span>ailz-integrated
-azd<span class="w"> </span>env<span class="w"> </span><span class="nb">set</span><span class="w"> </span>HUB_VNET_RESOURCE_ID<span class="w">             </span><span class="s2">"/subscriptions/&lt;sub&gt;/resourceGroups/&lt;hub-rg&gt;/providers/Microsoft.Network/virtualNetworks/&lt;hub-vnet&gt;"</span>
-azd<span class="w"> </span>env<span class="w"> </span><span class="nb">set</span><span class="w"> </span>EGRESS_NEXT_HOP_IP<span class="w">               </span><span class="s2">"&lt;hub firewall private IP&gt;"</span>
-azd<span class="w"> </span>env<span class="w"> </span><span class="nb">set</span><span class="w"> </span>NETWORK_ISOLATION<span class="w">                </span><span class="nb">true</span>
-
-<span class="c1"># Recommended: reuse hub observability</span>
-azd<span class="w"> </span>env<span class="w"> </span><span class="nb">set</span><span class="w"> </span>EXISTING_LOG_ANALYTICS_WORKSPACE_ID<span class="w"> </span><span class="s2">"/subscriptions/.../workspaces/&lt;law&gt;"</span>
-azd<span class="w"> </span>env<span class="w"> </span><span class="nb">set</span><span class="w"> </span>EXISTING_APPLICATION_INSIGHTS_ID<span class="w">    </span><span class="s2">"/subscriptions/.../components/&lt;ai&gt;"</span>
-</code></pre></div>
-<p>If your hub also hosts the standard Private DNS zones, set each <code>EXISTING_PRIVATE_DNS_ZONE_*</code> variable to its hub resource ID. See <a href="../parameterization/">Parameterization</a> for the complete list of 15 zone parameters.</p>
-<h2 id="network-planning">Network planning</h2>
-<p>The spoke VNet address space must not overlap with the hub VNet. The default spoke prefix (<code>10.0.0.0/22</code>) is safe for a hub on <code>10.100.0.0/16</code>. If your hub uses a different prefix, set:</p>
-<div class="highlight"><pre><span></span><code>azd<span class="w"> </span>env<span class="w"> </span><span class="nb">set</span><span class="w"> </span>VNET_ADDRESS_PREFIXES<span class="w"> </span><span class="s2">"[\"10.200.0.0/22\"]"</span>
-</code></pre></div>
-<p>Subnet minimums enforced by the pre-flight script:</p>
+<p>Contributor and role-assignment authority on the workload do not automatically
+authorize hub operations. Peering needs permissions at both VNet scopes,
+including remote <code>peer/action</code>. Shared-zone operations need zone join access;
+link creation needs zone/link write and VNet join permissions. Authorize
+monitoring access separately. Cross-subscription resources require appropriate
+provider registration and scoped access.</p>
+<p>The deployment host needs private DNS resolution and network/data-plane access.
+An ACR Tasks pool is not a connected deployment host. Bastion is interactive VM
+access, not a VPN for a workstation.</p>
+<div class="admonition warning">
+<p class="admonition-title">Test fixtures are not shared-platform deployments</p>
+<p>Upstream <code>tests/hub/</code> and <code>tests/scripts/</code> simulate a hub. Do not deploy
+them into an operational connectivity subscription or copy their empty
+route, disabled Search, skipped bootstrap or skipped preflight settings.</p>
+</div>
+<h2 id="address-and-subnet-contract">Address and subnet contract</h2>
+<p><a id="2-initialize-and-plan-addresses"></a></p>
+<p>Review the <a href="../standalone/#address-planning">complete address plan</a> against hub,
+spokes, VPN/on-premises and future networks. A VNet prefix alone does not update
+its default subnets. Store the approved native parameters in the selected
+source's root parameter file.</p>
+<p>For an existing VNet, preserve externally owned subnets, NSGs and delegations.
+With <code>USE_EXISTING_VNET=true</code>, the template does not create forward peering;
+the network team owns both directions. Do not update isolated existing subnets
+with <code>DEPLOY_NSGS=false</code>: retain managed NSGs or set <code>DEPLOY_SUBNETS=false</code> and
+have the network owner prepare the complete configuration.</p>
+<h2 id="hub-integration-inputs">Hub integration inputs</h2>
+<p><a id="3-configure-hub-integration"></a></p>
+<p><code>DEPLOYMENT_MODE=ailz-integrated</code> records intent. The explicit inputs below select
+resources and behavior; the preset alone does not enable isolation or wire a hub.</p>
 <table>
 <thead>
 <tr>
-<th>Subnet</th>
-<th>Minimum size</th>
-<th>Notes</th>
+<th>Environment input</th>
+<th>Intended value or role</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Container Apps environment</td>
-<td><code>/27</code> (consumption), <code>/23</code> (workload profiles)</td>
-<td>AVM requirement</td>
+<td><code>NETWORK_ISOLATION</code></td>
+<td><code>true</code></td>
 </tr>
 <tr>
-<td>Private endpoints</td>
-<td><code>/28</code></td>
-<td>One IP per private endpoint</td>
+<td><code>DEPLOY_AZURE_FIREWALL</code></td>
+<td><code>false</code> when using hub egress</td>
 </tr>
 <tr>
-<td>AzureBastionSubnet</td>
-<td><code>/26</code></td>
-<td>Fixed by Bastion</td>
+<td><code>DEPLOY_BASTION</code>, <code>DEPLOY_NAT_GATEWAY</code></td>
+<td><code>false</code> when not deploying local counterparts</td>
 </tr>
 <tr>
-<td>AzureFirewallSubnet</td>
-<td><code>/26</code></td>
-<td>Fixed by Azure Firewall</td>
+<td><code>DEPLOY_JUMPBOX</code></td>
+<td>Explicit choice; <code>true</code> creates a workload jumpbox</td>
 </tr>
 <tr>
-<td>Jumpbox</td>
-<td><code>/29</code></td>
-<td>One IP per VM</td>
+<td><code>EXISTING_BASTION_RESOURCE_ID</code></td>
+<td>Exact approved hub Bastion ID</td>
+</tr>
+<tr>
+<td><code>HUB_INTEGRATION_HUB_VNET_RESOURCE_ID</code></td>
+<td>Exact hub VNet ID</td>
+</tr>
+<tr>
+<td><code>HUB_INTEGRATION_CREATE_HUB_PEERING</code></td>
+<td><code>true</code> creates spoke→hub for a new isolated VNet; <code>false</code> leaves it externally managed</td>
+</tr>
+<tr>
+<td><code>HUB_INTEGRATION_EGRESS_NEXT_HOP_IP</code></td>
+<td>Hub firewall/NVA private IP for the workload default route</td>
+</tr>
+<tr>
+<td><code>HUB_INTEGRATION_EXISTING_ROUTE_TABLE_RESOURCE_ID</code></td>
+<td>Alternative approved route table; mutually exclusive with next-hop IP</td>
+</tr>
+<tr>
+<td><code>EXISTING_LOG_ANALYTICS_WORKSPACE_RESOURCE_ID</code></td>
+<td>Approved shared workspace, if reused</td>
+</tr>
+<tr>
+<td><code>EXISTING_APPLICATION_INSIGHTS_RESOURCE_ID</code></td>
+<td>Optional reused component; also supply its protected <code>EXISTING_APPLICATION_INSIGHTS_CONNECTION_STRING</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="deployment-flow">Deployment flow</h2>
-<pre class="mermaid"><code>flowchart LR
-    A[Hub team:&lt;br/&gt;VNet + Firewall + Bastion&lt;br/&gt;+ Private DNS zones&lt;br/&gt;+ LAW] --&gt; B
-    B[You: set DEPLOYMENT_MODE=ailz-integrated&lt;br/&gt;+ HUB_VNET_RESOURCE_ID&lt;br/&gt;+ EGRESS_NEXT_HOP_IP] --&gt; C
-    C[azd preprovision:&lt;br/&gt;Invoke-PreflightChecks.ps1] --&gt; D
-    D[azd provision:&lt;br/&gt;spoke VNet + private endpoints&lt;br/&gt;+ AI services + Container Apps&lt;br/&gt;+ spoke→hub peering]
-    D --&gt; E[You / hub team:&lt;br/&gt;create hub→spoke peering&lt;br/&gt;+ DNS zone links to spoke]
-    E --&gt; F[Verify hello-world from&lt;br/&gt;jumpbox over Bastion]</code></pre>
-<p>The pre-flight script catches the most common hub-and-spoke mistakes (typos in <code>HUB_VNET_RESOURCE_ID</code>, subnets too small, CIDR overlap with hub, missing ACA delegation on BYO subnets) <strong>before</strong> ARM rejects the deployment 20 minutes in.</p>
-<h2 id="see-also">See also</h2>
-<ul>
-<li><a href="https://github.com/Azure/bicep-ptn-aiml-landing-zone/blob/main/docs/runbook-hub-spoke.md">Source-repo hub-and-spoke runbook</a> — full walkthrough with test-hub Bicep, screenshots, and troubleshooting</li>
-<li><a href="../public-ingress/">Public Ingress with Application Gateway</a> — publish a private Container App through Application Gateway WAF v2</li>
-<li><a href="../parameterization/">Parameterization</a> — full parameter reference for BYO inputs</li>
-<li><a href="https://github.com/Azure/bicep-ptn-aiml-landing-zone/releases">Release notes on GitHub</a></li>
-</ul>
+<p>With a next-hop IP, the template creates a spoke route table with <code>0.0.0.0/0</code>
+to the hub appliance. A supplied route table is reused, not rewritten.
+Neither input being set does not enforce hub egress. Confirm region, association
+permissions and routes before choosing a shared table.</p>
+<p>Allow required spoke source CIDRs and destinations before bootstrap, image pulls
+and data-plane configuration. Review the
+<a href="https://github.com/Azure/bicep-ptn-aiml-landing-zone#firewall-egress-allow-list-network-isolation">foundation egress reference</a>
+and the Agent platform's <a href="../../agent-landing-zone/network-isolation/">build-egress requirements</a>.
+Check return paths, DNS transport, NSGs and forwarded traffic rather than
+opening unrestricted Internet access. Peering is not transitive.</p>
+<p>Reusing a central workspace does not automatically create local AMPLS. Local
+private monitoring has its own conditions; the central monitoring owner must
+provide private ingestion/query connectivity when needed. Confirm a reused
+Application Insights component belongs to the selected workspace. Do not enable
+mixed workspaces just to suppress validation.</p>
+<h2 id="private-dns-ownership">Private DNS ownership</h2>
+<p><a id="4-select-shared-dns-zones"></a></p>
+<p>Choose one ownership model:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Locally managed</td>
+<td>Template creates applicable zones and links</td>
+</tr>
+<tr>
+<td>Per-zone BYO</td>
+<td>Exact existing zone IDs suppress local creation and automatic VNet links; owners supply links/resolution</td>
+</tr>
+<tr>
+<td>Azure Policy-managed</td>
+<td><code>POLICY_MANAGED_PRIVATE_DNS=true</code> suppresses template DNS zones/zone groups; clear BYO overrides and agree the Policy-owned records/groups/links</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Peering does not propagate DNS zone links.</strong> Every client VNet needs a direct
+link or explicit DNS resolver/forwarding path to a linked network. With custom
+DNS, a zone link alone does not reconfigure clients. Avoid duplicate
+authoritative zones that hide records.</p>
+<p>Use actual approved zone IDs, not guessed names or synthesized cross-scope IDs.
+The following suffixes complete <code>EXISTING_PRIVATE_DNS_ZONE_&lt;SUFFIX&gt;_RESOURCE_ID</code>
+for Azure public cloud:</p>
+<table>
+<thead>
+<tr>
+<th>Suffix</th>
+<th>Zone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COGSVCS</code></td>
+<td><code>privatelink.cognitiveservices.azure.com</code></td>
+</tr>
+<tr>
+<td><code>OPENAI</code></td>
+<td><code>privatelink.openai.azure.com</code></td>
+</tr>
+<tr>
+<td><code>AISERVICES</code></td>
+<td><code>privatelink.services.ai.azure.com</code></td>
+</tr>
+<tr>
+<td><code>SEARCH</code></td>
+<td><code>privatelink.search.windows.net</code></td>
+</tr>
+<tr>
+<td><code>COSMOS</code></td>
+<td><code>privatelink.documents.azure.com</code></td>
+</tr>
+<tr>
+<td><code>BLOB</code></td>
+<td><code>privatelink.blob.core.windows.net</code></td>
+</tr>
+<tr>
+<td><code>KEYVAULT</code></td>
+<td><code>privatelink.vaultcore.azure.net</code></td>
+</tr>
+<tr>
+<td><code>APPCONFIG</code></td>
+<td><code>privatelink.azconfig.io</code></td>
+</tr>
+<tr>
+<td><code>CONTAINERAPPS</code></td>
+<td><code>privatelink.&lt;region&gt;.azurecontainerapps.io</code> — must match the deployment region</td>
+</tr>
+<tr>
+<td><code>ACR</code></td>
+<td><code>privatelink.azurecr.io</code></td>
+</tr>
+<tr>
+<td><code>AZUREMONITOR</code></td>
+<td><code>privatelink.monitor.azure.com</code></td>
+</tr>
+<tr>
+<td><code>OMSOPSINSIGHTS</code></td>
+<td><code>privatelink.oms.opinsights.azure.com</code></td>
+</tr>
+<tr>
+<td><code>ODSOPSINSIGHTS</code></td>
+<td><code>privatelink.ods.opinsights.azure.com</code></td>
+</tr>
+<tr>
+<td><code>AZUREAUTOMATION</code></td>
+<td><code>privatelink.agentsvc.azure.automation.net</code></td>
+</tr>
+<tr>
+<td><code>APPINSIGHTS</code></td>
+<td><code>privatelink.applicationinsights.io</code></td>
+</tr>
+</tbody>
+</table>
+<p>Monitoring overrides apply only when the corresponding local private-monitoring
+resources are created; they do not configure a central AMPLS. Provide only
+applicable zones. See the <a href="../parameterization/#private-dns-zones">full parameter reference</a>.
+Use unique link names where multiple spokes share zones; <code>DNS_ZONE_LINK_SUFFIX</code>
+only affects links the template itself creates.</p>
+<h2 id="peering-and-bootstrap-ordering">Peering and bootstrap ordering</h2>
+<p><a id="5-provision-and-complete-both-peering-directions"></a></p>
+<p>A fresh spoke can require the network operator during the first provision.
+As soon as the VNet exists, complete the authorized reverse peering and DNS
+links so bootstrap and private configuration can resolve and reach dependencies.
+Waiting for those stages to finish first can cause a recoverable failure.</p>
+<p>The template creates <strong>spoke→hub only</strong>, for a new isolated VNet when enabled.
+The hub owner creates the matching <strong>hub→spoke</strong> peering with forwarded traffic
+and VNet access. If peering is externally managed or the VNet is BYO, the
+network owner creates both. Record exact spoke-specific names for retirement.</p>
+<p>Gateway transit is a separate design choice. To consume the hub's gateway,
+the hub side allows gateway transit and the spoke uses remote gateways
+(<code>HUB_INTEGRATION_PEERING_USE_REMOTE_GATEWAYS=true</code> for template-managed peering).
+Do not set the spoke's <code>ALLOW_GATEWAY_TRANSIT</code> to consume a hub gateway; that is
+the opposite direction.</p>
+<h2 id="verify-the-network-contract">Verify the network contract</h2>
+<p><a id="6-link-dns-and-verify-from-the-connected-host"></a></p>
+<p>Use exact selected names and IDs:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>network<span class="w"> </span>vnet<span class="w"> </span>peering<span class="w"> </span>list<span class="w"> </span>-g<span class="w"> </span>&lt;hub-resource-group&gt;<span class="w"> </span>--vnet-name<span class="w"> </span>&lt;hub-vnet&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--subscription<span class="w"> </span>&lt;hub-subscription-id&gt;<span class="w"> </span>-o<span class="w"> </span>table
+az<span class="w"> </span>network<span class="w"> </span>vnet<span class="w"> </span>peering<span class="w"> </span>list<span class="w"> </span>-g<span class="w"> </span>&lt;spoke-resource-group&gt;<span class="w"> </span>--vnet-name<span class="w"> </span>&lt;spoke-vnet&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--subscription<span class="w"> </span>&lt;spoke-subscription-id&gt;<span class="w"> </span>-o<span class="w"> </span>table
+az<span class="w"> </span>network<span class="w"> </span>private-dns<span class="w"> </span>link<span class="w"> </span>vnet<span class="w"> </span>list<span class="w"> </span>-g<span class="w"> </span>&lt;dns-resource-group&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--zone-name<span class="w"> </span>&lt;private-zone-name&gt;<span class="w"> </span>--subscription<span class="w"> </span>&lt;dns-subscription-id&gt;<span class="w"> </span>-o<span class="w"> </span>table
+</code></pre></div>
+<p>Expect both peerings <code>Connected</code> with the approved forwarded-traffic/gateway
+settings, and required DNS links <code>Completed</code>. Inspect effective routes on a
+running workload/jumpbox NIC and route-table associations on managed subnets:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>network<span class="w"> </span>nic<span class="w"> </span>show-effective-route-table<span class="w"> </span>--ids<span class="w"> </span>&lt;running-jumpbox-nic-id&gt;<span class="w"> </span>-o<span class="w"> </span>table
+az<span class="w"> </span>network<span class="w"> </span>vnet<span class="w"> </span>subnet<span class="w"> </span>list<span class="w"> </span>-g<span class="w"> </span>&lt;spoke-resource-group&gt;<span class="w"> </span>--vnet-name<span class="w"> </span>&lt;spoke-vnet&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--query<span class="w"> </span><span class="s2">"[].{name:name,prefix:addressPrefix,routeTable:routeTable.id}"</span><span class="w"> </span>-o<span class="w"> </span>table
+</code></pre></div>
+<p>Expect the intended hub <code>VirtualAppliance</code> default route or approved shared route
+policy. Confirm the actual deployment host's private DNS/TCP/TLS path with the
+<a href="../standalone/#verify-private-connectivity">standalone connectivity checks</a>.
+Check service authorization and a new test trace in the intended workspace.
+<code>Connected</code> alone proves none of those data-plane results.</p>
+<p>For interactive access, use the <strong>hub's</strong> Bastion or approved VPN, not a local
+Bastion that this design disabled. Native RDP requires supported client/SKU
+and tunneling. An authorized portal password reset is safer than placing
+credentials in shell history or adding a public VM IP.</p>
+<h2 id="recovery-and-spoke-retirement">Recovery and spoke retirement</h2>
+<p><a id="7-recover-safely"></a>
+<a id="8-clean-up-only-the-spoke"></a></p>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Inspect before retry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Peering not connected</td>
+<td>Both IDs, overlap, remote-scope permissions and reverse peering</td>
+</tr>
+<tr>
+<td>Public/NXDOMAIN answers inside the network</td>
+<td>Zone IDs, groups/records, links for the actual client VNet and resolver forwarding</td>
+</tr>
+<tr>
+<td>Bootstrap, pull or package timeout</td>
+<td>Effective UDR/NSG, reverse peering and firewall denies for the actual source subnet/destination</td>
+</tr>
+<tr>
+<td>Missing central telemetry</td>
+<td>Workspace/component permissions and association, AMPLS, DNS and ingestion/query paths</td>
+</tr>
+<tr>
+<td>Quota, Policy or expired token</td>
+<td>Failed deployment operations and the specific approved capacity, policy or authentication repair</td>
+</tr>
+</tbody>
+</table>
+<p>Retry with the same approved revision, parameters and environment after repair;
+do not disable Search, open endpoints or skip checks for a green result.
+Use <a href="../../agent-landing-zone/deploy-infra-only/#reconfigure-or-upgrade-the-foundation">foundation reconfiguration</a>.</p>
+<p>For <a href="../../agent-landing-zone/deploy-full-stack/#remove-an-environment">safe removal</a>,
+obtain workload/data-retention approval and inventory dependencies first.
+Retire only recorded reverse peering and DNS links dedicated to this spoke with
+their owners. Preserve shared zones, hub VNet, Bastion, firewall, route tables,
+workspace and Application Insights. Confirm other spokes remain healthy.</p>
 
 
 

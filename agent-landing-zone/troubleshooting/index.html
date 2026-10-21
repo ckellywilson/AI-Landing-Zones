@@ -1,0 +1,2569 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for AI Landing Zones">
+      
+      
+        <meta name="author" content="Microsoft">
+      
+      
+      
+        <link rel="prev" href="../../portal/Readme/">
+      
+      
+        <link rel="next" href="../../whatisnew/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../media/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Troubleshooting - AI Landing Zones</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css?v=47a3a035c069">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Landing Zones" class="md-header__button md-logo" aria-label="AI Landing Zones" data-md-component="logo">
+      
+  <img src="../../media/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Landing Zones
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Azure/AI-Landing-Zones" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Landing Zones" class="md-nav__button md-logo" aria-label="AI Landing Zones" data-md-component="logo">
+      
+  <img src="../../media/logo.svg" alt="logo">
+
+    </a>
+    AI Landing Zones
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Azure/AI-Landing-Zones" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Landing Zone
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Landing Zone
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How the template works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/design-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan your deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plan your deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bicep/deployed-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources and cost estimates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/cost-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sizing and capacity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Runbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Runbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-infra-only/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure only
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-full-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full stack deploy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish-to-teams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams & M365
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure-devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosted-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent hosting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-isolation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network isolation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-your-own-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/Readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-changing-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before changing anything
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy stage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hosted-deployment-is-not-prepared" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted deployment is not prepared
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosted-agent-deployment-returns-an-agent-permission-denial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted agent deployment returns an agent permission denial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-definition-does-not-match-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application definition does not match the environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-hosted-image-pull-fails-with-a-classic-bundled-orchestrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom hosted image pull fails with a classic bundled orchestrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-deployment-prerequisites-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private deployment prerequisites failed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acr-task-agent-pool-is-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACR Task agent pool is missing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-installation-fails-inside-the-build-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package installation fails inside the build pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stale-component-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stale component checkout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-component-deployment-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A component deployment fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-succeeds-but-the-ui-or-administrative-panel-does-not-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy succeeds but the UI or administrative panel does not start
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provision-and-post-provision-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provision and post-provision stages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provision and post-provision stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-shared-private-links-are-not-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search shared private links are not ready
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingestion-selection-does-not-match-the-source-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestion selection does not match the source configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-source-permission-options-are-rejected-or-unexpected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared-source permission options are rejected or unexpected
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-dns-proxy-is-enabled-but-clients-still-resolve-incorrectly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firewall DNS proxy is enabled but clients still resolve incorrectly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosted-configuration-tls-handshake-stalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted configuration TLS handshake stalls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-preflight-region-and-quota" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search preflight region and quota
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quota-check-rejects-an-unchanged-existing-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quota check rejects an unchanged existing deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foundry-rejects-evaluation-api-key-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundry rejects evaluation API-key creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrative-panel-cannot-resolve-its-cosmos-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrative panel cannot resolve its Cosmos database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-endpoint-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing endpoint output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-post-provision-prerequisites-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private post-provision prerequisites failed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-provision-was-deferred" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-provision was deferred
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network_isolation-is-not-a-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NETWORK_ISOLATION is not a boolean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-fails-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provisioning fails in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-orchestrator-returns-http-422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The orchestrator returns HTTP 422
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosted-chat-works-but-history-is-unavailable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted chat works but history is unavailable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-application-starts-but-does-not-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The application starts but does not answer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-denied-between-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access denied between services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collect-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collect evidence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collect evidence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-application-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check application health
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-logs-from-a-container-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream logs from a container app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatisnew/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What's New
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-changing-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before changing anything
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy stage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hosted-deployment-is-not-prepared" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted deployment is not prepared
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosted-agent-deployment-returns-an-agent-permission-denial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted agent deployment returns an agent permission denial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-definition-does-not-match-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application definition does not match the environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-hosted-image-pull-fails-with-a-classic-bundled-orchestrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom hosted image pull fails with a classic bundled orchestrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-deployment-prerequisites-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private deployment prerequisites failed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acr-task-agent-pool-is-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACR Task agent pool is missing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-installation-fails-inside-the-build-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package installation fails inside the build pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stale-component-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stale component checkout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-component-deployment-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A component deployment fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-succeeds-but-the-ui-or-administrative-panel-does-not-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy succeeds but the UI or administrative panel does not start
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provision-and-post-provision-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provision and post-provision stages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provision and post-provision stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-shared-private-links-are-not-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search shared private links are not ready
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingestion-selection-does-not-match-the-source-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestion selection does not match the source configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-source-permission-options-are-rejected-or-unexpected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared-source permission options are rejected or unexpected
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-dns-proxy-is-enabled-but-clients-still-resolve-incorrectly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firewall DNS proxy is enabled but clients still resolve incorrectly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosted-configuration-tls-handshake-stalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted configuration TLS handshake stalls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-preflight-region-and-quota" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search preflight region and quota
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quota-check-rejects-an-unchanged-existing-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quota check rejects an unchanged existing deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foundry-rejects-evaluation-api-key-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundry rejects evaluation API-key creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrative-panel-cannot-resolve-its-cosmos-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrative panel cannot resolve its Cosmos database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-endpoint-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing endpoint output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-post-provision-prerequisites-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private post-provision prerequisites failed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-provision-was-deferred" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-provision was deferred
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network_isolation-is-not-a-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NETWORK_ISOLATION is not a boolean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-fails-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provisioning fails in Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-orchestrator-returns-http-422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The orchestrator returns HTTP 422
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosted-chat-works-but-history-is-unavailable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted chat works but history is unavailable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-application-starts-but-does-not-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The application starts but does not answer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-denied-between-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access denied between services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collect-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collect evidence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collect evidence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-application-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check application health
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-logs-from-a-container-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream logs from a container app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="troubleshooting">Troubleshooting</h1>
+<p>Start with the <strong>first failing stage and its exact error</strong>, not the last command
+that returned success. Provisioning, post-provision configuration, image
+preparation, application deployment and runtime access are separate checks.</p>
+<table>
+<thead>
+<tr>
+<th>What you see</th>
+<th>Start here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hosted deployment asks for preparation</td>
+<td><a href="#hosted-deployment-is-not-prepared">Hosted handoff</a></td>
+</tr>
+<tr>
+<td>Private endpoint or build-pool failure</td>
+<td><a href="#private-deployment-prerequisites-failed">Private prerequisites</a>, <a href="#package-installation-fails-inside-the-build-pool">package installation</a></td>
+</tr>
+<tr>
+<td>Configuration stops after provisioning</td>
+<td><a href="#provision-and-post-provision-stages">Post-provision diagnostics</a></td>
+</tr>
+<tr>
+<td>Deploy reports success but the application fails</td>
+<td><a href="#check-application-health">Revision health</a>, <a href="#deploy-succeeds-but-the-ui-or-administrative-panel-does-not-start">startup authentication</a></td>
+</tr>
+<tr>
+<td>Chat, history or authorization fails</td>
+<td><a href="#runtime">Runtime diagnostics</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="before-changing-anything">Before changing anything</h2>
+<ol>
+<li>Run diagnostics from the platform repository root. Confirm the intended
+   environment with <code>azd env list</code> and the Azure CLI subscription with
+   <code>az account show</code>. Verify the identity used by <code>azd</code> separately from the
+   CLI identity; they need not be the same.</li>
+<li>Record the failing command, time, stage, source revision and relevant
+   non-secret settings, such as <code>NETWORK_ISOLATION</code>, <code>BUILD_MODE</code> and
+   <code>DEPLOYMENT_TOPOLOGY</code>.</li>
+<li>For private environments, use a host with the required VPN/VNet connectivity.
+   Inspect DNS, TLS and authorization separately.</li>
+<li>Preserve local work and data. Do not delete resources, clear bindings,
+   disable authentication or bypass preflight to make an error disappear.</li>
+</ol>
+<p>Here, <code>classic</code> means the orchestrator runs in a <strong>Container App</strong>; hosted
+topologies run it in <strong>Foundry Agent Service</strong>. Confirm the selected topology
+before following a recovery path.</p>
+<div class="admonition tip">
+<p class="admonition-title">Share useful, redacted diagnostics</p>
+<p>Hooks write to the terminal. Bundled Container App component deployments
+also write child logs under <code>&lt;component&gt;/.logs</code>. Share the exact error and
+relevant log excerpt, not the full output of <code>azd env get-values</code>.
+Remove tokens, cookies, credentials, signed URLs, document contents,
+user identifiers and private environment names.</p>
+</div>
+<h2 id="deploy-stage">Deploy stage</h2>
+<h3 id="hosted-deployment-is-not-prepared">Hosted deployment is not prepared</h3>
+<p><strong>Symptom:</strong> Deployment asks you to run the hosted preparation script or reports
+an incomplete image handoff.</p>
+<p><strong>Diagnose:</strong> The first provision creates prerequisites and records
+<code>HOSTED_AGENT_PREPARED=true</code>. Preparation records an immutable image digest.
+A subsequent provision materializes the <code>DEPLOY_HOSTED_AGENT=true</code> handoff.
+None of these steps alone creates the data-plane agent version.</p>
+<p><strong>Correct:</strong> Follow the hosted sequence in
+<a href="../deploy-full-stack/#step-4-deploy">Deploy the full stack</a> from the first
+incomplete step. For an unchanged, compatible image, use the
+<a href="../deploy-full-stack/#redeploy-applications-only">redeployment guidance</a>.
+Do not set generated output flags manually.</p>
+<p><strong>Verify:</strong> Deployment targets the intended digest and routed agent version.
+Then test authenticated task execution and the retrieval/authorization features
+you use; a protocol greeting alone is not acceptance.</p>
+<h3 id="hosted-agent-deployment-returns-an-agent-permission-denial">Hosted agent deployment returns an agent permission denial</h3>
+<p><strong>Symptom:</strong> HTTP 403 names
+<code>Microsoft.CognitiveServices/accounts/AIServices/agents/read</code>.</p>
+<p><strong>Diagnose:</strong> Compare the denied object ID with the actual deployment principal.
+Successful ARM provisioning or a TLS connection does not prove Foundry
+data-plane permission.</p>
+<p><strong>Correct:</strong> Have an authorized administrator review the minimum project-scoped
+agent authoring role for that principal. A runner creating/updating agents needs
+<strong>Foundry User</strong> (formerly <strong>Azure AI User</strong>) or the appropriate equivalent
+custom role. Azure AI Developer targets different hub/workspace scenarios.
+Allow role propagation before retrying; do not grant resource-group Owner as
+a substitute.</p>
+<p><strong>Verify:</strong> The same principal can perform the previously denied operation.
+Test delegated-user/OBO access separately.</p>
+<h3 id="application-definition-does-not-match-the-environment">Application definition does not match the environment</h3>
+<p><strong>Symptom:</strong> <code>Application definition binding check failed. No changes were made.</code>
+with exit code <code>2</code>. An invalid definition instead exits with code <code>1</code>.</p>
+<p><strong>Diagnose:</strong> Compare the selected definition's application ID with the existing
+<code>AGENTLZ_APP_ID</code> binding. A custom hosted component does not automatically require
+switching the bundled orchestrator's topology.</p>
+<p><strong>Correct:</strong> Restore the matching definition. For a different application ID,
+use a separate environment and select the definition <strong>before first provision</strong>.
+Do not delete the binding or switch topology to bypass the mismatch.</p>
+<p><strong>Verify:</strong> Definition validation and binding checks pass for the intended
+environment. See <a href="../build-your-own-app/">Custom applications</a>.</p>
+<h3 id="custom-hosted-image-pull-fails-with-a-classic-bundled-orchestrator">Custom hosted image pull fails with a classic bundled orchestrator</h3>
+<p><strong>Symptom:</strong> A custom <code>azure.ai.agent</code> service cannot activate its private image,
+although Foundry project and registry outputs exist.</p>
+<p><strong>Diagnose:</strong> Check the Foundry <strong>project identity's</strong> registry pull grant and
+the exact image/registry. A legacy composition defect omitted hosted foundation
+preparation when the bundled orchestrator stayed in a Container App. The
+correction shipped in v4.2.3
+(<a href="https://github.com/Azure/agent-landing-zone/pull/779">PR #779</a>).</p>
+<p><strong>Correct:</strong> Use the complete corrected platform combination. Preserve the
+environment, definition and immutable image, then rerun the
+<a href="../deploy-full-stack/#step-4-deploy">full-stack provisioning workflow</a>.
+Provisioning applies the declarative pull grant; refreshing outputs alone
+cannot. For an external registry, review its supported pull-role mode and
+resource scope separately.</p>
+<p><strong>Verify:</strong> Image activation succeeds and the actual runtime principal receives
+the declared capabilities. Check the routed version before testing the agent.
+Do not enable registry admin credentials, grant broad roles or replace
+delegated-user/OBO authentication with a service identity.</p>
+<h3 id="private-deployment-prerequisites-failed">Private deployment prerequisites failed</h3>
+<p><strong>Symptom:</strong></p>
+<div class="highlight"><pre><span></span><code>Private deployment prerequisites failed. Use a VPN/VNet-connected host; RUN_FROM_JUMPBOX is not a connectivity bypass.
+</code></pre></div>
+<p><strong>Diagnose:</strong> With <code>NETWORK_ISOLATION=true</code>, the host cannot resolve or establish
+TLS to App Configuration, or to the Foundry project endpoint for hosted
+topologies. The gate allows up to 20 seconds per endpoint.</p>
+<p><strong>Correct:</strong> Move to the approved jumpbox, VPN or peered-VNet runner and inspect
+the <a href="../network-isolation/#verify-private-connectivity">private connectivity path</a>.
+<code>RUN_FROM_JUMPBOX</code> is not a bypass.</p>
+<p><strong>Verify:</strong> Resolve and reach each required endpoint from that runner, then
+retry the failed stage. A reachable endpoint can still reject authorization.</p>
+<h3 id="acr-task-agent-pool-is-missing">ACR Task agent pool is missing</h3>
+<p><strong>Symptom:</strong></p>
+<div class="highlight"><pre><span></span><code>Run 'azd env set DEPLOY_ACR_TASK_AGENT_POOL true' and 'azd provision', or set BUILD_MODE=local on a VNet-connected host with Docker.
+</code></pre></div>
+<p><strong>Diagnose:</strong> The private environment has no <code>ACR_TASK_AGENT_POOL</code> output and
+<code>BUILD_MODE</code> is not <code>local</code>. This guard also applies to a custom service with
+a prebuilt digest.</p>
+<p><strong>Correct:</strong> Select the pool intentionally and run the foundation workflow:</p>
+<div class="highlight"><pre><span></span><code>azd<span class="w"> </span>env<span class="w"> </span><span class="nb">set</span><span class="w"> </span>DEPLOY_ACR_TASK_AGENT_POOL<span class="w"> </span><span class="nb">true</span>
+azd<span class="w"> </span>provision
+</code></pre></div>
+<p>For supported Container App builds, local Docker on a connected host is an
+alternative. The jumpbox does not include Docker by default. Local mode is
+<strong>not</strong> a fallback for automatic hosted image preparation or isolated custom
+source builds. See <a href="../network-isolation/#image-builds-in-isolated-deployments">isolated image builds</a>.</p>
+<p><strong>Verify:</strong> Confirm the selected environment has the provisioned pool output
+and that a build runs in it. Then resume the topology's
+<a href="../deploy-full-stack/#step-4-deploy">deployment sequence</a>; hosted preparation
+may still be incomplete.</p>
+<h3 id="package-installation-fails-inside-the-build-pool">Package installation fails inside the build pool</h3>
+<p><strong>Symptom:</strong> An ACR run starts, but package installation fails. npm can report
+<code>Exit handler never called!</code>, followed by <code>tsc: not found</code>.</p>
+<p><strong>Diagnose:</strong> Retrieve the failed ACR run log from a connected host. Correlate
+timestamps and the build-agent source address with firewall deny logs. Check
+the pinned lockfile's <code>resolved</code> URLs, including redirect CDN destinations.
+A pulled base image does not prove package-feed access.</p>
+<p><strong>Correct:</strong> Confirm the pool and <code>extendFirewallForAcrTaskBuilds</code> are enabled
+and the shipped firewall changes are provisioned. The platform includes the
+orchestrator's Microsoft npm feeds, <code>*.vsblob.vsassets.io</code> and the existing
+<code>packages.microsoft.com</code> OS-package allowance. For additional verified
+dependencies, use
+<a href="../network-isolation/#application-specific-package-feeds">application-specific package feeds</a>.
+Keep exceptions limited to build-subnet HTTPS traffic.</p>
+<p><strong>Verify:</strong> Retry the same pinned source and confirm package installation and
+compilation both complete. Do not upgrade npm speculatively or assume a missing
+compiler proves a dependency-version defect.</p>
+<h3 id="stale-component-checkout">Stale component checkout</h3>
+<p><strong>Symptom:</strong> <code>Remove or relocate the stale sibling checkout</code>.</p>
+<p><strong>Diagnose:</strong> A bundled component's sibling folder exists at a different commit
+from <code>manifest.json</code>. Matching <code>HEAD</code> alone would not establish that local work
+is absent.</p>
+<p><strong>Correct:</strong> Inspect the named checkout, preserve local modifications and move
+it aside. Retry deployment to obtain the expected source. Delete it only after
+confirming it contains nothing needed; keep component development elsewhere.</p>
+<p><strong>Verify:</strong> The deployed source matches the manifest's tag <strong>and commit</strong>, and
+the intended application revision is healthy.</p>
+<h3 id="a-component-deployment-fails">A component deployment fails</h3>
+<p><strong>Symptom:</strong> <code>One or more components failed. See logs above.</code></p>
+<p><strong>Diagnose:</strong> Find the first failing component and its newest <code>.logs</code> file.
+Separate source checkout, image build/push, role and application-update errors.</p>
+<p><strong>Correct:</strong> Repair the dependency identified by that log. Use the private
+connectivity or build-pool entries above when appropriate. Do not assume every
+component failure is a registry-permission problem.</p>
+<p><strong>Verify:</strong> Retry the failed workflow and inspect the actual image, intended
+revision and startup logs, not only the child command's exit status.</p>
+<h3 id="deploy-succeeds-but-the-ui-or-administrative-panel-does-not-start">Deploy succeeds but the UI or administrative panel does not start</h3>
+<p><strong>Symptom:</strong> Child commands succeed, but the latest revision is unhealthy.
+Logs name <code>OAUTH_AZURE_AD_CLIENT_ID</code>, <code>OAUTH_AZURE_AD_CLIENT_SECRET</code>,
+<code>OAUTH_AZURE_AD_TENANT_ID</code> or missing panel OAuth settings.</p>
+<p><strong>Diagnose:</strong> Inspect the intended revision and image. A previous healthy
+placeholder can still serve HTTP 200 while the new revision fails.</p>
+<p><strong>Correct:</strong> Configure
+<a href="../hosted-agents/#configure-the-uis-delegated-authentication">delegated authentication</a>.
+Store the credential in Key Vault and publish its reference, not its value,
+under label <code>agent-lz</code>. Reload configuration through the supported
+<a href="../deploy-full-stack/#change-a-runtime-setting">lifecycle workflow</a>.</p>
+<p><strong>Verify:</strong> Check revision health, the Entra login redirect, real user login,
+OBO and rejection of unauthenticated panel data requests. Do not disable the
+panel or authentication to turn a missing-authentication error into a pass.</p>
+<h2 id="provision-and-post-provision-stages">Provision and post-provision stages</h2>
+<h3 id="search-shared-private-links-are-not-ready">Search shared private links are not ready</h3>
+<p><strong>Symptom:</strong> Private native <code>azureBlob</code> source configuration reports pending
+approval, denied Search reads or a readiness timeout.</p>
+<p><strong>Diagnose:</strong> Inspect the <strong>exact</strong> reported Search service, link name, target
+and group. Runner private access and successful ARM provisioning do not prove
+Search-managed outbound access. Each required source link must report both
+<code>Approved</code> and <code>Succeeded</code>.</p>
+<p><strong>Correct:</strong></p>
+<ul>
+<li><strong>Pending:</strong> Have an authorized administrator investigate and approve only
+  the exact target request using
+  <a href="https://learn.microsoft.com/azure/search/search-indexer-howto-access-private">Microsoft's procedure</a>.
+  Configuration does not approve requests automatically.</li>
+<li><strong>ARM 401/403:</strong> Review the runner's
+  <code>Microsoft.Search/searchServices/sharedPrivateLinkResources/read</code> permission.
+  Target approval does not replace it.</li>
+<li><strong>Approved but provisioning:</strong> Allow propagation and inspect the failed
+  link's state. Readiness polling has a 600-second budget, 10-second intervals
+  and requests bounded by 30 seconds and the remaining budget.</li>
+<li><strong>Missing long-name manifest:</strong> Re-provision the updated template through an
+  authorized deployment to publish <code>SEARCH_SHARED_PRIVATE_LINKS</code> under
+  <code>agent-lz</code>. Do not invent a hashed name or edit metadata to approve another
+  request.</li>
+</ul>
+<p><strong>Verify:</strong> Rerun post-provision from a connected host, then verify source
+processing and authorized retrieval. The gate runs before dependent Search
+mutation and source creation. Do not approve unrelated requests, enumerate
+target connections as a workaround, enable public access or bypass the gate.
+See <a href="../network-isolation/#private-native-blob-ingestion">Private native Blob ingestion</a>.</p>
+<h3 id="ingestion-selection-does-not-match-the-source-configuration">Ingestion selection does not match the source configuration</h3>
+<p><strong>Symptom:</strong> A fresh environment has no ingestion Container App, a source
+combination fails validation, or attachment behavior differs from expectations.</p>
+<p><strong>Diagnose:</strong> Fresh bundled deployments default
+<code>DEPLOY_INGESTION_CONTAINER_APP=false</code>, independently of orchestrator hosting.
+Native source ingestion covers supported Foundry IQ sources, not all ingestion
+application features or conversation uploads. Existing environments and custom
+definitions retain their component intent.</p>
+<p><strong>Correct:</strong> Check the resolved component selection, retrieval backend, source
+kind and index bindings using <a href="../ingestion/">Ingestion</a>. To retain or restore the
+application, select it explicitly and run the
+<a href="../deploy-full-stack/#step-4-deploy">full workflow</a>, not only <code>azd deploy</code>.
+An externally populated index must be named explicitly where required.</p>
+<div class="admonition warning">
+<p class="admonition-title">Older UI compatibility</p>
+<p>The upload gate was introduced with platform v4.3.0 / UI v3.3.0.
+On platform v4.2.3 / UI v3.2.2, retain
+<code>DEPLOY_INGESTION_CONTAINER_APP=true</code> until the coordinated
+<a href="../ingestion/#upgrade-and-retirement-safety">upgrade</a> is complete.
+Clearing ingestion endpoints or editing the attachment widget is not a
+supported opt-out. Never switch to anonymous authentication to hide uploads.</p>
+</div>
+<p><strong>Verify:</strong> Confirm the effective <code>agent-lz</code> key and intended UI revision.
+With supported opt-out, attachment controls must be hidden and direct/stale
+uploads rejected, while text chat, authentication, retrieval and document
+authorization still work. A missing key retains legacy behavior; explicit
+<code>false</code> activates the gate. Do not delete existing apps, documents or indexes
+as incidental cleanup.</p>
+<h3 id="shared-source-permission-options-are-rejected-or-unexpected">Shared-source permission options are rejected or unexpected</h3>
+<p><strong>Symptom:</strong> Source configuration rejects
+<code>FOUNDRY_IQ_INGESTION_PERMISSION_OPTIONS</code>, or a source has unexpected permission
+metadata.</p>
+<p><strong>Diagnose:</strong> Omitted or actual-null values retain <code>["rbacScope"]</code>; explicit
+<code>[]</code> means something different. For active native Blob ingestion, an empty list
+deliberately selects shared access only for recognized non-ADLS <code>azureBlob</code>
+configuration. Unsupported or ambiguous active sources fail closed. In
+non-native <code>ai_search</code> or <code>foundry_iq</code>/<code>searchIndex</code> modes, accepted <code>[]</code> is
+unused metadata, not shared-source activation.</p>
+<p><strong>Correct:</strong> Supply valid JSON for the intended source policy. For protected
+Blob ingestion, restore <code>["rbacScope"]</code>. Nonempty non-ADLS Blob lists support
+only <code>rbacScope</code> and <code>sensitivityLabels</code>. Review
+<a href="../configuration/#explicit-shared-source-permission-options">the full input contract</a>
+for source/pattern constraints and the historical <code>managed</code> alias.</p>
+<p><strong>Verify:</strong> Rerun source configuration, inspect permission metadata and test
+document allow/deny behavior. Do not use <code>[]</code> to bypass private-link, RBAC or
+authentication failures.</p>
+<h3 id="firewall-dns-proxy-is-enabled-but-clients-still-resolve-incorrectly">Firewall DNS proxy is enabled but clients still resolve incorrectly</h3>
+<p><strong>Symptom:</strong> Private names resolve incorrectly after enabling the DNS proxy.</p>
+<p><strong>Diagnose:</strong> <code>ENABLE_FIREWALL_DNS_PROXY</code> defaults to <code>false</code>; its opt-in applies
+only with firewall deployment and isolation enabled. It does not change VNet/VPN
+client DNS settings or build-feed egress.</p>
+<p><strong>Correct:</strong> Inspect the affected client's DNS server, zone links and forwarding
+path. Make client DNS changes deliberately and separately from proxy enablement.
+See <a href="../network-isolation/#opt-in-firewall-dns-proxy">Firewall DNS proxy</a>.</p>
+<p><strong>Verify:</strong> Resolve the required names and test private TLS from the actual
+client. Do not enable public access as a workaround.</p>
+<h3 id="hosted-configuration-tls-handshake-stalls">Hosted configuration TLS handshake stalls</h3>
+<p><strong>Symptom:</strong> Hosted bootstrap stalls while loading App Configuration or Key
+Vault references.</p>
+<p><strong>Diagnose:</strong> Distinguish name resolution, routing, TLS and HTTP authorization
+errors at both endpoints. Confirm the actual runtime identity. MTU is not an
+established cause of every timeout.</p>
+<p><strong>Correct:</strong> Only for the confirmed transport compatibility case, use the
+<a href="../hosted-agents/#configuration-tls-compatibility">endpoint-scoped TLS profile</a>.
+It was introduced in platform v4.2.3 with orchestrator v5.2.1. Supply the actual
+<code>KEY_VAULT_URI</code>, deliberately select <code>APP_CONFIG_TLS_COMPATIBILITY=true</code> and
+deploy the corrected agent version. To restore SDK defaults, use <code>false</code> and
+redeploy. Never disable certificate verification, downgrade TLS globally or
+broaden roles to conceal a transport failure.</p>
+<p>If bootstrap resolves a UI-only secret, inspect the
+<a href="../configuration/#runtime-settings">actual label selectors</a>: in the SDK,
+<code>None</code> selects all labels, while <code>"\0"</code> selects only unlabelled settings.
+Use the corrected selector, not weaker vault permissions or deleted labels.</p>
+<p><strong>Verify:</strong> The new version completes configuration using valid TLS and the
+intended identity. Test real application behavior separately.</p>
+<h3 id="search-preflight-region-and-quota">Search preflight region and quota</h3>
+<p><strong>Symptom:</strong> Preflight checks <code>AZURE_LOCATION</code> despite
+<code>AZURE_SEARCH_LOCATION</code>, or counts only one service when two will be created.</p>
+<p><strong>Diagnose:</strong> Earlier hooks had region/count defects corrected in v4.2.3.
+An empty <code>AZURE_SEARCH_LOCATION</code> falls back to <code>AZURE_LOCATION</code>. Both workload
+and newly created Agent Service Search must be accounted for.</p>
+<p><strong>Correct:</strong> Check the effective region and selected resources using
+<a href="../configuration/#search-region-and-quota">Search region and quota</a>.
+Verify local hooks and repository-owned infrastructure match the intended
+coordinated source. Request quota or deliberately select a supported region;
+do not set <code>PREFLIGHT_SKIP</code> or <code>AGENTLZ_REGIONAL_PREFLIGHT_SKIP</code>.</p>
+<p><strong>Verify:</strong> Preflight checks the effective region and full creation count,
+then provisioning succeeds. Preflight does not reserve capacity.</p>
+<h3 id="quota-check-rejects-an-unchanged-existing-deployment">Quota check rejects an unchanged existing deployment</h3>
+<p><strong>Symptom:</strong> Re-provision reports insufficient remaining model quota for the
+same account, deployment and configured capacity.</p>
+<p><strong>Diagnose:</strong> The v4.2.2 preflight compared full requested capacity with unused
+regional quota, without crediting an existing matching deployment. This could
+block the second provision of a hosted deployment.</p>
+<p><strong>Correct:</strong> Verify environment, account region, deployment, model/version and
+SKU. Use the coordinated correction introduced in v4.2.3
+(<a href="https://github.com/Azure/agent-landing-zone/pull/773">PR #773</a>).
+It credits only verified successful matching capacity and aggregates quota
+pools. Fresh allocations and changed/unverified targets still need capacity.</p>
+<p><strong>Verify:</strong> Both preflight gates evaluate the intended incremental request.
+Do not delete the existing deployment, reduce capacity just to pass or disable
+the gate. Model availability checks still apply.</p>
+<h3 id="foundry-rejects-evaluation-api-key-creation">Foundry rejects evaluation API-key creation</h3>
+<p><strong>Symptom:</strong> <code>Failed to list key. disableLocalAuth is set to be true</code>.</p>
+<p><strong>Diagnose:</strong> The account requires Entra ID. Legacy v4.2.2 post-provision still
+attempted evaluation-key injection; its final success message did not prove
+the secret existed.</p>
+<p><strong>Correct:</strong> Keep local authentication disabled and use Entra ID for evaluation.
+The correction introduced in v4.2.3
+(<a href="https://github.com/Azure/agent-landing-zone/pull/773">PR #773</a>) skips
+inapplicable key injection and surfaces unexpected key/Key Vault errors.</p>
+<p><strong>Verify:</strong> Post-provision reports the expected Entra-only path and evaluation
+works with the intended identity. Do not enable keys to hide the error.</p>
+<h3 id="administrative-panel-cannot-resolve-its-cosmos-database">Administrative panel cannot resolve its Cosmos database</h3>
+<p><strong>Symptom:</strong> <code>DEPLOY_ADMINISTRATIVE_PANEL is true but DATABASE_ACCOUNT_NAME is not set</code>.</p>
+<p><strong>Diagnose:</strong> Legacy v4.2.2 panel role setup expected process inputs even when
+<code>DATABASE_ACCOUNT_NAME</code> and <code>DATABASE_NAME</code> were published in App Configuration.</p>
+<p><strong>Correct:</strong> Confirm the two settings under <code>agent-lz</code> for the selected
+environment. Use the coordinated correction introduced in v4.2.3
+(<a href="https://github.com/Azure/agent-landing-zone/pull/773">PR #773</a>), which reads
+published settings when process inputs are absent.</p>
+<p><strong>Verify:</strong> Panel configuration resolves the actual account/database and
+preserves container-scoped grants. Do not guess a database name or broaden
+permissions to the whole account.</p>
+<h3 id="missing-endpoint-output">Missing endpoint output</h3>
+<p><strong>Symptom:</strong></p>
+<div class="highlight"><pre><span></span><code>Missing &lt;KEY&gt;. Run provisioning and load the selected azd environment outputs before this stage.
+</code></pre></div>
+<p><strong>Diagnose:</strong> The selected environment lacks a required output such as
+<code>APP_CONFIG_ENDPOINT</code>, <code>AZURE_AI_PROJECT_ENDPOINT</code> or
+<code>AZURE_CONTAINER_REGISTRY_ENDPOINT</code>.</p>
+<p><strong>Correct:</strong> Confirm the environment first. If it is already provisioned and
+you moved machines, use <code>azd env refresh</code>. If provision is incomplete, follow
+<a href="../deploy-infra-only/">Deploy infrastructure only</a>. Do not invent endpoint
+values to satisfy a guard.</p>
+<p><strong>Verify:</strong> The environment's outputs refer to its actual provisioned resources,
+then retry the failed stage.</p>
+<h3 id="private-post-provision-prerequisites-failed">Private post-provision prerequisites failed</h3>
+<p><strong>Symptom:</strong></p>
+<div class="highlight"><pre><span></span><code>Private post-provision prerequisites failed. Connect through VPN/VNet and rerun postProvision; configuration has not started.
+</code></pre></div>
+<p><strong>Diagnose:</strong> Provisioning completed, but the runner cannot reach private App
+Configuration, so configuration has not started.</p>
+<p><strong>Correct:</strong> Connect through an approved jumpbox, VPN or peered VNet. Follow
+<a href="../deploy-infra-only/#complete-a-deferred-post-provision">Complete a deferred post-provision</a>.</p>
+<p><strong>Verify:</strong> The configuration hook actually completes from the connected host.
+Do not infer success from resource provisioning alone.</p>
+<h3 id="post-provision-was-deferred">Post-provision was deferred</h3>
+<p><strong>Symptom:</strong></p>
+<div class="highlight"><pre><span></span><code>Post-provision configuration explicitly deferred; application setup is incomplete.
+</code></pre></div>
+<p><strong>Diagnose:</strong> An explicit deferral can exit successfully without configuring
+the application. In isolated mode, <code>RUN_FROM_JUMPBOX=false</code> (also <code>0</code>, <code>no</code>,
+<code>skip</code>) or a truthy <code>AZURE_SKIP_NETWORK_ISOLATION_WARNING</code> without a truthy
+<code>RUN_FROM_JUMPBOX</code> selects deferral.</p>
+<p><strong>Correct:</strong> Complete
+<a href="../deploy-infra-only/#complete-a-deferred-post-provision">the deferred step</a>
+from a connected host. A truthy <code>RUN_FROM_JUMPBOX</code> requests connectivity
+checking; it does not provide connectivity.</p>
+<p><strong>Verify:</strong> Post-provision logs show completed configuration rather than another
+deferral before resuming application deployment.</p>
+<h3 id="network_isolation-is-not-a-boolean"><code>NETWORK_ISOLATION</code> is not a boolean</h3>
+<p><strong>Symptom:</strong> A hook rejects the isolation value.</p>
+<p><strong>Diagnose:</strong> The selected environment contains a value other than literal
+<code>true</code> or <code>false</code>.</p>
+<p><strong>Correct:</strong> Restore the value required by the intended network design, for
+example <code>azd env set NETWORK_ISOLATION true</code> for an isolated environment.
+Do not flip it to <code>false</code> merely to pass connectivity checks.</p>
+<p><strong>Verify:</strong> The effective value matches the intended topology and validation
+passes before any provisioning changes.</p>
+<h3 id="provisioning-fails-in-azure">Provisioning fails in Azure</h3>
+<p><strong>Symptom:</strong> A resource deployment fails after preflight.</p>
+<p><strong>Diagnose:</strong> Open <strong>Resource group &gt; Deployments</strong> in the Azure portal and
+inspect the first failed operation, including its policy, quota, region or
+resource-name error.</p>
+<p><strong>Correct:</strong> Resolve that specific cause. Region/name changes can replace
+stateful resources, so review their impact before retrying the
+<a href="../deploy-infra-only/#reconfigure-or-upgrade-the-foundation">foundation workflow</a>.
+Never delete an existing resource just because its name is occupied.</p>
+<p><strong>Verify:</strong> The failed deployment and post-provision configuration both complete.
+Incremental ARM success is not application acceptance.</p>
+<h2 id="runtime">Runtime</h2>
+<h3 id="the-orchestrator-returns-http-422">The orchestrator returns HTTP 422</h3>
+<p><strong>Symptom:</strong> The agent rejects a request with validation details.</p>
+<p><strong>Diagnose:</strong> The stateless <strong>Responses 2.0.0</strong> adapter rejects non-null
+<code>previous_response_id</code>, empty asks and message arrays not ending with a user
+message. Top-level <code>conversation</code> is ignored by this adapter, not itself the
+reason for a rejection. The UI's <code>/invocations?api-version=v1</code> uses another
+request shape.</p>
+<p><strong>Correct:</strong> Use the returned validation detail and the correct
+<a href="../hosted-agents/#calling-the-agent">calling contract</a>. For stateless Responses,
+remove state selectors and supply complete, ordered context.</p>
+<p><strong>Verify:</strong> A valid request succeeds through the intended endpoint. Do not
+interchange endpoint request bodies.</p>
+<h3 id="hosted-chat-works-but-history-is-unavailable">Hosted chat works but history is unavailable</h3>
+<p><strong>Symptom:</strong> A greeting works, but history is unavailable or panel history
+returns 503.</p>
+<p><strong>Diagnose:</strong> Hosted runtime is stateless. Without separately activated
+continuity, context is limited to the active UI session. Application Cosmos DB
+in <code>hosted-panel</code> stores owner/index and feedback metadata, not transcripts.
+Agent Service backing resources alone do not enable UI history.</p>
+<p><strong>Correct:</strong> Review continuity activation, panel gates, owner binding and
+agent-scoped permissions in <a href="../hosted-agents/#calling-the-agent">Hosted agents</a>.
+Apply deliberate configuration changes through the full workflow. Do not
+register the Container App/Dapr history layer for hosted chat or grant broad
+conversation access to the hosted container.</p>
+<p><strong>Verify:</strong> Test intended persistence across sessions, same-owner access and
+cross-user denial. A greeting or a page reload is not sufficient evidence.</p>
+<h3 id="the-application-starts-but-does-not-answer">The application starts but does not answer</h3>
+<p><strong>Symptom:</strong> The application loads but an authenticated task fails.</p>
+<p><strong>Diagnose:</strong></p>
+<ol>
+<li>Confirm the intended image and revision or routed hosted version using
+   <a href="#check-application-health">health checks</a>.</li>
+<li>Read startup and request logs using <a href="#monitoring">correlated diagnostics</a>.</li>
+<li>Inspect the effective configuration using the
+   <a href="../configuration/#runtime-settings">actual component selectors</a>.</li>
+<li>Follow the first failing model, retrieval, tool or identity dependency.</li>
+</ol>
+<p><strong>Correct:</strong> Repair the identified dependency, then use the appropriate
+<a href="../deploy-full-stack/#change-a-runtime-setting">runtime-setting lifecycle</a>
+or <a href="../deploy-full-stack/#redeploy-applications-only">redeployment</a>.
+Do not assume a restart can apply infrastructure or process-only settings.</p>
+<p><strong>Verify:</strong> Repeat the same authenticated task and test document authorization
+when retrieval is involved. Keep credentials and content out of diagnostics.</p>
+<h3 id="access-denied-between-services">Access denied between services</h3>
+<p><strong>Symptom:</strong> A dependency returns HTTP 401/403 or names a denied action.</p>
+<p><strong>Diagnose:</strong> Identify the caller's actual principal, target, denied action
+and scope. A project identity, deployment principal and hosted runtime identity
+are not interchangeable. Also distinguish a service call from delegated-user
+authorization.</p>
+<p><strong>Correct:</strong> Compare the deployed grants with
+<a href="../build-your-own-app/#capability-profiles">capability profiles</a> and the
+<a href="../hosted-agents/#bootstrap-the-agents-runtime-access">hosted runtime access model</a>.
+Allow new assignments to propagate before requesting additional access. Use
+<a href="../deploy-full-stack/#recover-hosted-runtime-access">hosted recovery</a> where
+required; do not assign blanket roles manually.</p>
+<p>For application-component configuration failures, the catalog's implicit base
+profile is a useful checklist:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Intended resource scope</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App Configuration Data Reader</td>
+<td>Selected App Configuration store</td>
+<td>Read runtime settings</td>
+</tr>
+<tr>
+<td>AcrPull</td>
+<td>Selected container registry</td>
+<td>Pull images</td>
+</tr>
+<tr>
+<td>Key Vault Secrets User</td>
+<td>Selected Key Vault</td>
+<td>Resolve secret references</td>
+</tr>
+</tbody>
+</table>
+<p>Additional grants depend on declared profiles, selected resources and topology.
+Hosted bootstrap, continuity and panel permissions are reconciled separately;
+this table is not a script for assigning identical grants to every principal.</p>
+<p><strong>Verify:</strong> The same intended identity can perform the required operation while
+unauthorized users/documents remain denied.</p>
+<h2 id="collect-evidence">Collect evidence</h2>
+<h3 id="check-application-health">Check application health</h3>
+<p>For <strong>Container Apps</strong>, list the latest and latest-ready revisions:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>containerapp<span class="w"> </span>list<span class="w"> </span>-g<span class="w"> </span><span class="s2">"&lt;resource-group&gt;"</span><span class="w"> </span>--query<span class="w"> </span><span class="s2">"[].{name:name,state:properties.runningStatus,latest:properties.latestRevisionName,ready:properties.latestReadyRevisionName}"</span><span class="w"> </span>-o<span class="w"> </span>table
+az<span class="w"> </span>containerapp<span class="w"> </span>revision<span class="w"> </span>list<span class="w"> </span>-g<span class="w"> </span><span class="s2">"&lt;resource-group&gt;"</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"&lt;container-app-name&gt;"</span><span class="w"> </span>--query<span class="w"> </span><span class="s2">"[].{name:name,active:properties.active,health:properties.healthState,image:properties.template.containers[].image}"</span><span class="w"> </span>-o<span class="w"> </span>json
+</code></pre></div>
+<p>Compare the intended image/revision with the ready revision and traffic routing.
+An older placeholder can return HTTP 200 while the intended application fails.
+Inspect system and startup logs for that exact revision.</p>
+<p>For a <strong>Foundry hosted orchestrator</strong>, inspect its routed version, immutable
+image and Foundry runtime logs separately. Container Apps commands cover the UI,
+optional ingestion and Container App orchestration, not hosted agent compute.</p>
+<h3 id="stream-logs-from-a-container-app">Stream logs from a container app</h3>
+<p>Select the failing revision explicitly:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>containerapp<span class="w"> </span>logs<span class="w"> </span>show<span class="w"> </span>-g<span class="w"> </span><span class="s2">"&lt;resource-group&gt;"</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"&lt;container-app-name&gt;"</span><span class="w"> </span>--revision<span class="w"> </span><span class="s2">"&lt;revision-name&gt;"</span><span class="w"> </span>--follow
+</code></pre></div>
+<p>If the revision has multiple replicas or containers, select the relevant ones
+using the command's <code>--replica</code> and <code>--container</code> options. Avoid treating output
+from another healthy revision as evidence about the failed image.</p>
+<h3 id="monitoring">Monitoring</h3>
+<p>Use <strong>Application Insights &gt; Transaction search</strong> to correlate a request with
+its dependencies and traces. Use <strong>Log Analytics</strong> for container output and
+platform events. Confirm diagnostic settings and the selected workspace if
+expected logs are absent.</p>
+<p>Recent Container Apps errors:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ContainerAppConsoleLogs_CL</span>
+<span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
+<span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">Log_s</span><span class="w"> </span><span class="n">has_any</span><span class="w"> </span><span class="p">(</span><span class="s">"ERROR"</span><span class="p">,</span><span class="w"> </span><span class="s">"Exception"</span><span class="p">,</span><span class="w"> </span><span class="s">"Traceback"</span><span class="p">)</span>
+<span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">ContainerAppName_s</span><span class="p">,</span><span class="w"> </span><span class="n">Log_s</span>
+<span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="n">desc</span>
+</code></pre></div>
+<p>Revision, scaling and startup events:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ContainerAppSystemLogs_CL</span>
+<span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">1</span><span class="n">h</span><span class="p">)</span>
+<span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="p">,</span><span class="w"> </span><span class="n">ContainerAppName_s</span><span class="p">,</span><span class="w"> </span><span class="n">Reason_s</span><span class="p">,</span><span class="w"> </span><span class="n">Log_s</span>
+<span class="p">|</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">TimeGenerated</span><span class="w"> </span><span class="n">desc</span>
+</code></pre></div>
+<p>These queries depend on the configured Container Apps log destination and schema;
+they do not query Foundry hosted runtime logs. No matching rows does not establish
+application health.</p>
+<p>UI records containing <code>exception_type</code> and <code>failure_site</code> intentionally omit
+dependency error payloads. Correlate the static operation, code location and
+request reference with dependency telemetry. Do not enable raw token, cookie,
+claim, signed-URL or document logging to fill that gap. A failed optional panel
+index write needs repair even when the chat continues; it is not proof the index
+was persisted.</p>
+<p>Telemetry content capture is a separate, default-off privacy choice, not a
+prerequisite for successful chat or safe diagnosis.</p>
+<h2 id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../deploy-full-stack/">Deployment runbook</a></li>
+<li><a href="../configuration/">Configuration</a></li>
+<li><a href="../network-isolation/">Network isolation</a></li>
+<li><a href="../ingestion/">Ingestion</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <div style="
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  text-align: center;
+  font-size: 0.95em;
+  padding: 1em 0;
+">
+  © 2026 Azure AI Landing Zones
+</div>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.icon", "content.iconify", "navigation.tracking", "content.code.annotate", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

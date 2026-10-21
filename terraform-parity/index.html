@@ -6,17 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentation for Azure AI Landing Zones">
+        <meta name="description" content="Documentation for AI Landing Zones">
       
       
         <meta name="author" content="Microsoft">
       
       
       
-        <link rel="prev" href="../terraform/">
-      
-      
-        <link rel="next" href="../portal/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Terraform parity - Azure AI Landing Zones</title>
+        <title>Terraform guidance has moved - AI Landing Zones</title>
       
     
     
@@ -53,7 +49,7 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css?v=47a3a035c069">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bicep-and-terraform-feature-parity" class="md-skip">
+        <a href="#terraform-guidance-has-moved" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Azure AI Landing Zones" class="md-header__button md-logo" aria-label="Azure AI Landing Zones" data-md-component="logo">
+    <a href=".." title="AI Landing Zones" class="md-header__button md-logo" aria-label="AI Landing Zones" data-md-component="logo">
       
   <img src="../media/logo.svg" alt="logo">
 
@@ -107,13 +103,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Azure AI Landing Zones
+            AI Landing Zones
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Terraform parity
+              Terraform guidance has moved
             
           </span>
         </div>
@@ -203,12 +199,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Azure AI Landing Zones" class="md-nav__button md-logo" aria-label="Azure AI Landing Zones" data-md-component="logo">
+    <a href=".." title="AI Landing Zones" class="md-nav__button md-logo" aria-label="AI Landing Zones" data-md-component="logo">
       
   <img src="../media/logo.svg" alt="logo">
 
     </a>
-    Azure AI Landing Zones
+    AI Landing Zones
   </label>
   
     <div class="md-nav__source">
@@ -258,15 +254,62 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Landing Zone
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Landing Zone
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../whatisnew/" class="md-nav__link">
+      <a href="../agent-landing-zone/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    What's New
+    Overview
   
 
     
@@ -278,33 +321,23 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+              
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-landing-zone/how-it-works/" class="md-nav__link">
+        
   
   
   <span class="md-ellipsis">
     
   
-    Architecture
+    How the template works
   
 
     
@@ -312,19 +345,11 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Architecture
+      </a>
+    </li>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+              
             
               
                 
@@ -360,69 +385,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../architecture/cost-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Cost Guide
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../architecture/faq/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FAQ
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
@@ -432,17 +394,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Bicep Implementation
+    Plan your deployment
   
 
     
@@ -453,44 +415,16 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Bicep Implementation
+    Plan your deployment
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bicep/overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -506,7 +440,7 @@
   <span class="md-ellipsis">
     
   
-    Deployed Resources & Cost
+    Resources and cost estimates
   
 
     
@@ -527,14 +461,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../bicep/how-to-deploy/" class="md-nav__link">
+      <a href="../architecture/cost-guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    How to Deploy
+    Cost planning
   
 
     
@@ -555,14 +489,97 @@
   
   
     <li class="md-nav__item">
-      <a href="../bicep/deploy-with-azure-devops/" class="md-nav__link">
+      <a href="../agent-landing-zone/sizing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy with Azure DevOps
+    Sizing and capacity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Runbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Runbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-landing-zone/deploy-infra-only/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure only
   
 
     
@@ -583,14 +600,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../bicep/regional-considerations/" class="md-nav__link">
+      <a href="../agent-landing-zone/deploy-full-stack/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Regional Considerations
+    Full stack deploy
   
 
     
@@ -611,14 +628,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../bicep/hub-and-spoke/" class="md-nav__link">
+      <a href="../agent-landing-zone/publish-to-teams/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Hub-and-Spoke Topology
+    Teams & M365
   
 
     
@@ -639,14 +656,97 @@
   
   
     <li class="md-nav__item">
-      <a href="../bicep/public-ingress/" class="md-nav__link">
+      <a href="../agent-landing-zone/azure-devops/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Public Ingress (App Gateway)
+    Azure DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-landing-zone/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
   
 
     
@@ -667,14 +767,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../bicep/permissions/" class="md-nav__link">
+      <a href="../agent-landing-zone/hosted-agents/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Permissions
+    Agent hosting
   
 
     
@@ -695,14 +795,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../bicep/parameterization/" class="md-nav__link">
+      <a href="../agent-landing-zone/network-isolation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Parameterization
+    Network isolation
   
 
     
@@ -723,14 +823,106 @@
   
   
     <li class="md-nav__item">
-      <a href="../bicep/accelerator-pattern/" class="md-nav__link">
+      <a href="../agent-landing-zone/build-your-own-app/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Building Accelerators (Submodule Pattern)
+    Custom applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portal/Readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-landing-zone/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
   
 
     
@@ -758,14 +950,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../terraform/" class="md-nav__link">
+      <a href="../whatisnew/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Terraform Implementation
+    What's New
   
 
     
@@ -774,168 +966,6 @@
   
 
       </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Terraform parity
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Terraform parity
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-scenarios-used-for-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment scenarios used for comparison
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-terms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key terms
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-compared" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is compared
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-continuous-parity-maintenance-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How continuous parity maintenance works
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-continuous-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Detailed continuous workflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automation-and-human-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automation and human control
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#current-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Current status
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authoritative-records-and-process-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Authoritative records and process documents
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -947,14 +977,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../portal/" class="md-nav__link">
+      <a href="../architecture/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Portal installation
+    FAQ
   
 
     
@@ -987,102 +1017,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-scenarios-used-for-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment scenarios used for comparison
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-terms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key terms
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-compared" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is compared
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-continuous-parity-maintenance-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How continuous parity maintenance works
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-continuous-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Detailed continuous workflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automation-and-human-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automation and human control
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#current-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Current status
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authoritative-records-and-process-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Authoritative records and process documents
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1101,225 +1035,19 @@
   
 
 
-<h1 id="bicep-and-terraform-feature-parity">Bicep and Terraform feature parity</h1>
-<p>The AI Landing Zone is a reusable set of files and guidance for deploying a
-standard Azure environment for AI workloads. It can be deployed with
-<strong>infrastructure as code</strong>, which means text files describe the Azure resources
-and settings so that a deployment can be reviewed and repeated.</p>
-<p><strong>Bicep</strong> and <strong>Terraform</strong> are two infrastructure-as-code languages. Bicep is
-designed for Azure deployments. Terraform can deploy Azure resources through
-its Azure integration and uses its own configuration format and tools.</p>
-<p>The AI Landing Zone has one implementation in each language:</p>
-<ul>
-<li><a href="https://github.com/Azure/bicep-ptn-aiml-landing-zone">Bicep implementation</a></li>
-<li><a href="https://github.com/Azure/terraform-azurerm-avm-ptn-aiml-landing-zone">Terraform implementation</a></li>
-</ul>
-<p>They live in separate repositories because each language has its own files,
-modules, tests, review process, and release process. The repositories can change
-at different times, so a capability may be added to one implementation before
-the other or may behave differently.</p>
-<p><strong>Equivalent behavior</strong> means that, for the same supported deployment scenario,
-both implementations provide the same intended capabilities, access controls,
-network behavior, settings and values that users and applications depend on,
-and working deployed result. It does not mean that the Bicep and Terraform
-source code must look the same.</p>
-<p>The feature parity initiative detects and manages differences through human
-review, focused Terraform updates, and recorded deployment evidence.</p>
-<h2 id="deployment-scenarios-used-for-comparison">Deployment scenarios used for comparison</h2>
-<p>A <strong>deployment scenario</strong> is an approved combination of options that is tested
-as one case. The current parity work assesses two scenarios:</p>
-<ul>
-<li><strong><code>standalone-standard</code></strong> is the standard standalone deployment.</li>
-<li><strong><code>standalone-network-isolated</code></strong> is the standalone deployment with network
-  isolation and private connectivity.</li>
-</ul>
-<p>The scenarios are assessed independently because network isolation changes how
-services connect, resolve names, route traffic, and enforce access. A successful
-standard deployment does not prove that private connectivity works, and a
-successful network-isolated deployment does not replace testing the standard
-deployment.</p>
-<h2 id="key-terms">Key terms</h2>
-<table>
-<thead>
-<tr>
-<th>Term</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Capability</strong></td>
-<td>A feature the deployment supports, such as using an existing Azure resource or using private connectivity.</td>
-</tr>
-<tr>
-<td><strong>Parity</strong></td>
-<td>Bicep and Terraform support the same approved capability and observable behavior for a named deployment scenario.</td>
-</tr>
-<tr>
-<td><strong>Parity assessment</strong></td>
-<td>A reviewed decision about whether a merged Bicep change requires Terraform work.</td>
-</tr>
-<tr>
-<td><strong>Handoff</strong></td>
-<td>An approved, immutable record that tells the Terraform repository which behavior, constraints, scenarios, and checks are in scope. Immutable means the record is read from one specific commit and cannot be changed during delivery.</td>
-</tr>
-<tr>
-<td><strong>Proposal pull request (PR)</strong></td>
-<td>A draft Terraform change created for maintainers to review. It is not an approval to merge, deploy, or release.</td>
-</tr>
-<tr>
-<td><strong>Terraform request receiver</strong></td>
-<td>A workflow in the Terraform repository that validates an approved handoff and starts the process for one draft proposal pull request.</td>
-</tr>
-<tr>
-<td><strong>Evidence</strong></td>
-<td>Reviewed records that show what was compared, which checks passed, what was deployed, and how deployed behavior was verified.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="what-is-compared">What is compared</h2>
-<p>A matching list of Azure resources is not enough to establish parity. The
-comparison also covers:</p>
-<ul>
-<li><strong>Parameters and defaults:</strong> the choices users can provide and the values used
-  when they do not provide a choice.</li>
-<li><strong>Outputs:</strong> the information returned after deployment for people, scripts,
-  and other systems to use.</li>
-<li><strong>Identity and role-based access control (RBAC):</strong> the managed identities and
-  permissions used by services and people.</li>
-<li><strong>Networking:</strong> public or private access, private endpoints, name resolution,
-  and traffic routing.</li>
-<li><strong>Runtime configuration:</strong> the settings that deployed services and
-  applications use while running.</li>
-<li><strong>Deployed behavior:</strong> what actually works after the resources are created,
-  not only whether the source files pass static checks.</li>
-</ul>
-<h2 id="how-continuous-parity-maintenance-works">How continuous parity maintenance works</h2>
-<p>After the starting baseline is established, this is the permanent process for
-each relevant Bicep merge. Not every Bicep merge produces Terraform work.</p>
-<pre class="mermaid"><code>%%{init: {"flowchart": {"nodeSpacing": 10, "rankSpacing": 12, "curve": "linear"}}}%%
-flowchart LR
-    A["Bicep PR&lt;br/&gt;merged"] --&gt; B{"Terraform&lt;br/&gt;affected?"}
-    B -- No --&gt; C["Record&lt;br/&gt;no change"]
-    B -- Yes --&gt; D["Human approves&lt;br/&gt;handoff"]
-    D --&gt; E["Immutable handoff&lt;br/&gt;to Terraform repo"]
-    E --&gt; F["Draft&lt;br/&gt;Terraform PR"]
-    F --&gt; G["Human&lt;br/&gt;review"]
-    G --&gt; H["Approved deployment&lt;br/&gt;of both scenarios"]
-    H --&gt; I["Record&lt;br/&gt;evidence"]</code></pre>
-<ol>
-<li>Create a pending parity assessment for the merged Bicep pull request.</li>
-<li>Have a human reviewer decide whether the change affects Terraform and record
-   the reason.</li>
-<li>If it does not affect Terraform, record the no-change decision and stop. No
-   handoff or Terraform proposal is created.</li>
-<li>If Terraform work is required, classify it as <code>proposal-required</code> and require
-   human approval of the assessment and handoff.</li>
-<li>Send the approved, immutable handoff to the Terraform repository.</li>
-<li>Have the Terraform request receiver validate the handoff and start one draft
-   proposal pull request for review.</li>
-<li>Have Terraform maintainers review the proposal and decide whether to merge
-   it.</li>
-<li>For accepted work, approve deployments of both relevant scenarios in
-   approved test environments.</li>
-<li>Record deployment and behavior evidence before making a parity decision.</li>
-</ol>
-<p>Only an approved <code>proposal-required</code> assessment can create a handoff and start
-a Terraform proposal. A merged proposal pull request is not proof of parity.</p>
-<div class="admonition note">
-<p class="admonition-title">Initial equalization establishes the starting baseline once</p>
-<p>Before continuous maintenance can handle smaller changes, maintainers
-inventory the current Bicep and Terraform capabilities and identify gaps
-separately for <code>standalone-standard</code> and
-<code>standalone-network-isolated</code>. They open focused Terraform proposal pull
-requests for approved gaps, review and merge each accepted proposal, deploy
-both scenarios in approved test environments, and record evidence.</p>
-<p>Initial equalization is a one-time initiative. After the baseline is
-established, the continuous process above handles new differences from
-relevant Bicep merges.</p>
-</div>
-<h2 id="detailed-continuous-workflow">Detailed continuous workflow</h2>
-<pre class="mermaid"><code>sequenceDiagram
-    participant B as Bicep
-    participant A as Assessment
-    actor H as Parity reviewer
-    participant R as Terraform receiver
-    participant T as Draft PR
-    actor M as TF maintainer
-
-    B-&gt;&gt;A: Bicep PR merged
-    A-&gt;&gt;H: Pending assessment
-    H-&gt;&gt;H: Assess Terraform impact
-    alt No Terraform impact
-        H-&gt;&gt;A: Record no-change decision
-    else Approved proposal required
-        H-&gt;&gt;A: Approve assessment and handoff
-        H-&gt;&gt;B: Approve sending the handoff
-        B-&gt;&gt;R: Send immutable handoff
-        R-&gt;&gt;R: Validate request
-        R-&gt;&gt;T: Start one draft proposal
-        T-&gt;&gt;M: Request review
-        M-&gt;&gt;T: Review and decide
-        M-&gt;&gt;M: Approve both scenario deployments
-        M-&gt;&gt;M: Record deployment evidence
-    end</code></pre>
-<h2 id="automation-and-human-control">Automation and human control</h2>
-<p>Automation reduces repeated record-keeping and validates that requests follow
-the approved contract. It can:</p>
-<ul>
-<li>create a pending assessment after an eligible Bicep merge;</li>
-<li>validate records, commit references, approvals, and duplicate requests;</li>
-<li>send a handoff only after the required human approvals; and</li>
-<li>validate the handoff in the Terraform repository and start the process that
-  produces one draft Terraform proposal pull request.</li>
-</ul>
-<p>Humans still decide:</p>
-<ul>
-<li>whether a Bicep change affects Terraform;</li>
-<li>whether an assessment and handoff are approved;</li>
-<li>whether sending the handoff is approved;</li>
-<li>whether a Terraform proposal is correct and should merge;</li>
-<li>whether and where test deployments may run; and</li>
-<li>whether the recorded evidence is sufficient for a parity decision.</li>
-</ul>
-<p>The system never automatically:</p>
-<ul>
-<li>merges a pull request;</li>
-<li>deploys Azure resources;</li>
-<li>runs <code>terraform apply</code>;</li>
-<li>publishes a release;</li>
-<li>writes Terraform changes back into the Bicep implementation; or</li>
-<li>claims runtime parity.</li>
-</ul>
-<p>A merged Terraform proposal completes implementation work only. Runtime parity
-still requires approved deployment and comparison evidence for each applicable
-scenario.</p>
-<h2 id="current-status">Current status</h2>
-<p>As of August 2026, the parity framework and baseline capability inventory exist
-in the Bicep repository. Initial draft Terraform proposals were created for
-<a href="https://github.com/Azure/terraform-azurerm-avm-ptn-aiml-landing-zone/pull/162">networking</a>
-and
-<a href="https://github.com/Azure/terraform-azurerm-avm-ptn-aiml-landing-zone/pull/164">application platform</a>,
-and the
-<a href="https://github.com/Azure/terraform-azurerm-avm-ptn-aiml-landing-zone/pull/170">Terraform request receiver is also a draft proposal</a>.</p>
-<p>These proposals and the receiver remain subject to repository review. Approved
-test deployments and recorded behavior evidence are still required before any
-runtime parity claim. This status does <strong>not</strong> claim that Bicep and Terraform
-have completed parity.</p>
-<h2 id="authoritative-records-and-process-documents">Authoritative records and process documents</h2>
-<p>This page is a public overview. It does not replace the administrative runbook
-and does not contain operator credentials or secret values.</p>
-<ul>
-<li><a href="https://github.com/Azure/bicep-ptn-aiml-landing-zone/blob/main/docs/terraform-parity-process.md">Bicep parity process guide</a></li>
-<li><a href="https://github.com/Azure/bicep-ptn-aiml-landing-zone/blob/main/docs/terraform-parity-ownership.md">Ownership and operations runbook</a></li>
-<li><a href="https://github.com/Azure/bicep-ptn-aiml-landing-zone/blob/main/docs/terraform-parity.md">Generated capability inventory</a></li>
-</ul>
+<h1 id="terraform-guidance-has-moved">Terraform guidance has moved</h1>
+<p>See the <a href="../terraform/">Terraform foundation reference</a>.
+For Agent Landing Zone, use <a href="../agent-landing-zone/deploy-infra-only/">Deploy infrastructure only</a>
+or <a href="../agent-landing-zone/deploy-full-stack/">Deploy the full stack</a>.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
