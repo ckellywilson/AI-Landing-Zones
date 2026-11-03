@@ -79,6 +79,11 @@ def main():
               "The example must not bypass the legacy warning by default")
 
     ci_steps = pipeline["stages"][0]["jobs"][0]["steps"]
+    ci_body = "\n".join(s.get("bash", "") for s in ci_steps)
+    check("az bicep build --file infra/bicep/main.bicep --stdout" in ci_body,
+          "CI must compile the product Bicep entrypoint from the platform root")
+    check("infra/main.bicep" not in ci_body and "infra/scripts/" not in ci_body,
+          "CI must not use removed product infrastructure paths")
     deploy_steps = deployment["strategy"]["runOnce"]["deploy"]["steps"]
     scripts = []
     python_blocks = 0
@@ -118,9 +123,10 @@ def main():
     check("azd config set auth.useAzCliAuth true" in body, "Missing Azure CLI auth handoff")
     check("azd env refresh" in body and "|| true" not in body, "Refresh must fail closed")
     check("azd hooks run preup" in body, "Validate binding before standalone provision")
-    check(body.index("azd provision") < body.index("prepareHostedDeployment.sh")
-          < body.rindex("azd provision") < body.index("azd deploy"),
-          "First hosted deployment needs provision/prepare/provision/deploy")
+    check(body.count("azd provision --no-prompt") == 1
+          and body.index("azd provision --no-prompt") < body.index("azd deploy --no-prompt")
+          and "prepareHostedDeployment" not in body,
+          "Hosted deployment needs one provision followed by deploy-owned preparation")
     check(python_blocks == 1, "Expected to syntax-check the settings Python block")
     cleanup = deploy_steps[-1]
     check(cleanup["condition"] == "always()", "Runtime-state cleanup must run after failure")
